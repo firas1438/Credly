@@ -15,7 +15,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
           {/* header */}
           <Header />
           {/* page content */}
-          <main className='mx-auto size-full max-w-7xl flex-1 p-10 '>
+          <main className='mx-auto size-full max-w-7xl flex-1 px-10 py-8 '>
             {children}
           </main>
           {/* footer */}

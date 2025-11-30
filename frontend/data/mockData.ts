@@ -1,4 +1,4 @@
-import { User, Account, Transaction, AuditLog } from '@/types'
+import { User, Account, Transaction } from '@/types'
 
 // Users Data
 export const usersData: User[] = [
@@ -134,58 +134,11 @@ export const transactionsData: Transaction[] = [
   }
 ]
 
-// Audit Logs Data
-export const auditLogsData: AuditLog[] = [
-  {
-    id: 1,
-    action: "LOGIN",
-    timestamp: new Date('2024-01-15T10:25:00'),
-    user: usersData[0],
-    details: { success: true }
-  },
-  {
-    id: 2,
-    action: "TRANSACTION",
-    timestamp: new Date('2024-01-15T10:30:00'),
-    user: usersData[0],
-    details: { transaction: transactionsData[0] }
-  },
-  {
-    id: 3,
-    action: "OTP_ATTEMPT",
-    timestamp: new Date('2024-01-14T14:20:00'),
-    user: usersData[1],
-    details: { attempts: 1, success: true }
-  },
-  {
-    id: 4,
-    action: "TRANSACTION",
-    timestamp: new Date('2024-01-14T14:22:00'),
-    user: usersData[1],
-    details: { transaction: transactionsData[1] }
-  },
-  {
-    id: 5,
-    action: "OTP_ATTEMPT",
-    timestamp: new Date('2024-01-11T11:18:00'),
-    user: usersData[0],
-    details: { attempts: 2, success: false }
-  },
-  {
-    id: 6,
-    action: "LOGOUT",
-    timestamp: new Date('2024-01-15T11:00:00'),
-    user: usersData[0],
-    details: {}
-  }
-]
-
 // Export all data
 export const mockData = {
   users: usersData,
   accounts: accountsData,
   transactions: transactionsData,
-  auditLogs: auditLogsData
 }
 
 export default mockData
